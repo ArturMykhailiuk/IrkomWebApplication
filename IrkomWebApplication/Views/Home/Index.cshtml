@@ -7,26 +7,26 @@
 
 <html>
 <head>
-    <title>NataliOneLove</title>
+    <title>Прайс лист</title>
 </head>
 <body>
-    <h3>Honey, I LOVE YOU!!! Have A Nice Day!!!</h3>
+    <h3>Список товарів</h3>
     <img class="img-thubnail" src="~/img/1007.jpg">
     <table>
-      <!--  <tr>
+        <tr>
             <td>Модель</td>
             <td>Производитель</td>
             <td>Цена</td>
             <td></td>
-        </tr>-->
+        </tr>
         @foreach (var phone in Model)
         {
-          <!--  <tr>
+            <tr>
                 <td>@phone.Name</td>
                 <td>@phone.Company</td>
                 <td>@phone.Price</td>
                 <td><a href="~/Home/Buy/@phone.Id">Купить</a></td>
-            </tr> -->
+            </tr> 
         }
     </table>
 </body>
