@@ -9,7 +9,7 @@ function uploadFiles(inputId) {
   var input = document.getElementById(inputId);
   var files = input.files;
   var formData = new FormData();
-  alert("1") 
+  
   for (var i = 0; i != files.length; i++) {
     formData.append("files", files[i]);
   }
