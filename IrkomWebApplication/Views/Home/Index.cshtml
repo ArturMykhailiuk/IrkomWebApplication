@@ -4,8 +4,12 @@
     Layout = null;
 }
 <!DOCTYPE html>
+<link rel="stylesheet" href="~/css/site.css" />
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
 
 <html>
+
 <head>
     <title>Прайс лист</title>
 </head>
@@ -25,8 +29,20 @@
                 <td>@phone.Company</td>
                 <td>@phone.Price</td>
                 <td><a href="~/Home/Buy/@phone.Id">Купить</a></td>
-            </tr> 
+            </tr>
+
         }
     </table>
+    <form id="form4" name="form3" action="/uploader" enctype="multipart/form-data" method="post">
+        <div class="buttons">
+            <div class="upload-button">
+                <div class="label">Click me!</div>
+                <input id="files" name="files" type="file" size="1" multiple onchange="uploadFiles('files');" />
+            </div>
+        </div>
+    </form>
+    <script src="//ajax.aspnetcdn.com/ajax/jquery/jquery-1.11.3.min.js"></script>
+    <script src="/js/aspnetcorefileuploading.js"></script>
+
 </body>
 </html>
