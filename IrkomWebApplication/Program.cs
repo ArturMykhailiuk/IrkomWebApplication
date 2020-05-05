@@ -4,6 +4,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using IrkomWebApplication.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace IrkomWebApplication
 {
@@ -27,8 +29,21 @@ namespace IrkomWebApplication
                     logger.LogError(ex, "An error occurred seeding the DB.");
                 }
             }
+
+            /*  using MobileContext db = new MobileContext();
+
+            var comps = db.Phones.FromSqlRaw("SELECT * FROM Phone").ToList();
+            foreach (var company in comps)
+                Console.WriteLine(company.Name);
+
             host.Run();
+            */
+            
+
+
         }
+        
+
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)

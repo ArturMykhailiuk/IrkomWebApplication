@@ -16,5 +16,9 @@ namespace IrkomWebApplication.Models
         {
             Database.EnsureCreated();
         }
+
+        public MobileContext()
+        {
+        }
     }
 }
